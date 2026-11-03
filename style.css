@@ -1,0 +1,170 @@
+/* Folha de estilo externa compartilhada por todas as páginas */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background-color: #f5f6f8;
+}
+
+/* Seletor ID: identifica uma única área da página */
+#header {
+    background-color: #263746;
+    color: white;
+    padding: 22px;
+    text-align: center;
+}
+
+#header h1 {
+    margin: 0 0 8px;
+}
+
+#header p {
+    margin: 0;
+}
+
+.layout {
+    display: flex;
+    min-height: 430px;
+}
+
+/* Menu lateral */
+#menu {
+    width: 220px;
+    flex-shrink: 0;
+    background-color: #e5eaf0;
+    padding: 20px;
+}
+
+#menu h2 {
+    margin-top: 0;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Seletor class: pode ser utilizado em vários elementos */
+.link-menu {
+    display: block;
+    color: #263746;
+    text-decoration: none;
+    padding: 11px 12px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+}
+
+.link-menu:hover,
+.link-menu.ativo {
+    background-color: #263746;
+    color: white;
+}
+
+#main {
+    flex: 1;
+    padding: 28px;
+    min-width: 0;
+}
+
+.localizacao {
+    color: #687785;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.destaque,
+.painel,
+.cartao {
+    background-color: white;
+    padding: 22px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.08);
+}
+
+.destaque h2,
+.painel h2 {
+    color: #263746;
+    margin-top: 0;
+}
+
+.cartoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.cartao {
+    flex: 1 1 190px;
+    margin-bottom: 0;
+}
+
+.cartao h3 {
+    color: #315c7a;
+    margin-top: 0;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #315c7a;
+    color: white;
+    text-decoration: none;
+    padding: 9px 14px;
+    border-radius: 5px;
+}
+
+.botao:hover {
+    background-color: #203f55;
+}
+
+.lista-conteudo li {
+    margin-bottom: 10px;
+}
+
+#footer {
+    background-color: #263746;
+    color: white;
+    text-align: center;
+    padding: 14px;
+}
+
+#footer p {
+    margin: 0;
+}
+
+/* Responsividade: adapta o layout para telas menores */
+@media (max-width: 650px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    #menu {
+        width: 100%;
+    }
+
+    #menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .link-menu {
+        margin-bottom: 0;
+    }
+
+    #main {
+        padding: 18px;
+    }
+
+    .cartoes {
+        flex-direction: column;
+    }
+}
